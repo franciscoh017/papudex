@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-pokedex": {
+    "papudex": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-pokedex",
+            "outputPath": "dist/papudex",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,6 +24,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bulma/css/bulma.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,18 +64,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-pokedex:build"
+            "browserTarget": "papudex:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-pokedex:build:production"
+              "browserTarget": "papudex:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-pokedex:build"
+            "browserTarget": "papudex:build"
           }
         },
         "test": {
@@ -89,6 +90,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bulma/css/bulma.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -111,15 +113,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "my-pokedex:serve"
+            "devServerTarget": "papudex:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "my-pokedex:serve:production"
+              "devServerTarget": "papudex:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "my-pokedex"
+    }
+  },
+  "defaultProject": "papudex"
 }

@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 0;
+}
+
+#search {
+    background-color: #ff3860;
+    padding: 2em;
+}
+
+#search-sticky {
+    position: sticky;
+    top:0;
+}
+
+#dex-grid {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#dex-grid .poke {
+    display: flex;
+    padding: 0.25em;
+    margin: 5px;
+    border: gray 2px solid;
+    border-radius: 5px;
+    flex-direction: column;
+    text-decoration: none;
+    max-width: 150px;
+    cursor: pointer;
+}

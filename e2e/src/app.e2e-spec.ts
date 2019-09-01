@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('my-pokedex app is running!');
+    expect(page.getTitleText()).toEqual('papudex app is running!');
   });
 
   afterEach(async () => {
